@@ -132,12 +132,25 @@ function App() {
     { id: 9, nombre: "Soporte Laptop", precio: 35.00 },
   ]);
 
+  const handleVerTodos = () => {
+    alert("Ver todos los productos");
+  };
+
+  const handleAgregarProducto = () => {
+    alert("Agregar nuevo producto");
+  };
+
   return (
     <section>
       <h1>Bienvenido Nicolas castilla</h1>
       <h2>Datachan</h2>
       <h3>CESDE Bogotá</h3>
       
+      <div className="botones-principales">
+        <button onClick={handleVerTodos}>Ver Todos</button>
+        <button onClick={handleAgregarProducto}>Agregar Producto</button>
+      </div>
+
       <div className="productos-container">
         {productos.map((producto) => (
           <ProductCard 
