@@ -120,14 +120,34 @@ import ProductCard from "./components/ProductCard";
 // }
 
 function App() {
+  const [productos] = useState([
+    { id: 1, nombre: "Laptop", precio: 1200.00 },
+    { id: 2, nombre: "Mouse", precio: 25.99 },
+    { id: 3, nombre: "Teclado", precio: 79.99 },
+    { id: 4, nombre: "Monitor", precio: 350.00 },
+    { id: 5, nombre: "Audífonos", precio: 120.00 },
+    { id: 6, nombre: "Webcam", precio: 65.00 },
+    { id: 7, nombre: "Hub USB", precio: 45.50 },
+    { id: 8, nombre: "Mousepad", precio: 15.99 },
+    { id: 9, nombre: "Soporte Laptop", precio: 35.00 },
+  ]);
+
   return (
     <section>
       <h1>Bienvenido Nicolas castilla</h1>
       <h2>Datachan</h2>
       <h3>CESDE Bogotá</h3>
+      
+      <div className="productos-container">
+        {productos.map((producto) => (
+          <ProductCard 
+            key={producto.id}
+            id={producto.id}
+            nombre={producto.nombre}
+            precio={producto.precio}
+          />
+        ))}
+      </div>
     </section>
-    
-
-    
   );
 }
