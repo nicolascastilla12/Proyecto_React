@@ -17,6 +17,83 @@
   }
 }
 
+/* Estilos principales */
+section > h1 {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+section > h2 {
+  text-align: center;
+  margin: 5px 0;
+}
+
+section > h3 {
+  text-align: center;
+  margin: 5px 0 30px;
+}
+
+/* Botones principales */
+.botones-principales {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.botones-principales button {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.botones-principales button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Grid de productos */
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-card .precio {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #28a745;
+}
+
 .hero {
   position: relative;
 
